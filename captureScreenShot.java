@@ -18,7 +18,7 @@ public class captureScreenShot {
 		driver.navigate().to("https://www.google.com");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		
+		System.out.println("Good Morning");
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File srcfile = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(srcfile, new File (".\\ScreenShot\\"+timestamp()+".jpeg"));
